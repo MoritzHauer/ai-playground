@@ -1,0 +1,3 @@
+# Ignore input and output data files
+input/
+output/
