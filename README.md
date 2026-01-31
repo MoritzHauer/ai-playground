@@ -25,3 +25,7 @@ really interesting data and thoughts about current ai trends. Here some insights
 - openspec is the better alternative compared to speckit
 - Using more tools to ensure ai generated Code quality and Security. For example SonarQube, ESLint, Ruff(Python Linter)
 - use prompt library to get good working prompts and instructions 
+
+## [Agentic ProbLLMs: Exploiting AI](https://media.ccc.de/v/39c3-agentic-probllms-exploiting-ai-computer-use-and-coding-agents#t=761)
+
+real interesting talk about prompt injection 
