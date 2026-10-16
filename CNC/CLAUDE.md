@@ -13,6 +13,7 @@ Werkzeugkette fuer die Shapeoko 3 XXL im FLKA. Plan und Fahrplan: `PLAN.md`.
 ## Konventionen
 - Einheiten mm. **X0 Y0 = vordere linke Werkstueckecke, Z0 = Werkstueckoberseite.** Negative Z gehen ins Material.
 - Ein Projekt ist `projects/<name>/job.py` mit einer Funktion `job() -> Job`. `out/` ist erzeugt, wird mit eingecheckt (damit man die Datei im Lab von GitHub laden kann) und nie von Hand bearbeitet.
+- **Durchschneiden:** Etwas zu tief ist besser als nicht durch. Standard sind 0,8 mm in die Opferplatte (Grenze 1,0 mm in `machine.toml`).
 - Eine `.nc`-Datei pro Fraeser. Werkzeugwechsel ist manuell, danach wird der Z-Nullpunkt neu gesetzt.
 - G-Code: nur ASCII, G21/G90, kein M3 (die Spindel wird von Hand geschaltet), erste Bewegung ist ein senkrechtes `G0 Z<safe>`.
 - Code-Kommentare englisch, alles fuer den Menschen (Einrichteblatt, Meldungen) deutsch.

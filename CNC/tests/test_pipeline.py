@@ -42,7 +42,12 @@ def test_herz_builds_clean(tmp_path):
     [out] = build(herz_job(), tmp_path)
     assert not [f for f in out.findings if f.level == "FEHLER"]
     prog = gcode.parse(out.nc.read_text())
-    assert prog.points()[:, 2].min() == pytest.approx(-6.3)
+    z = prog.points()[:, 2]
+    assert z.min() == pytest.approx(-8.8)
+    # 4 even passes of 2.2 mm, no thin last pass
+    assert sorted({round(v, 3) for v in z if v < 0 and abs(v / 2.2 - round(v / 2.2)) < 1e-6}) == [-8.8, -6.6, -4.4, -2.2]
+    feeds = {s.feed for s in prog.segments if not s.rapid}
+    assert max(feeds) == 800 and min(feeds) == 300  # cautious first-run values, not the table's 1000
     assert (tmp_path / "SETUP.md").exists() and (tmp_path / "herz.svg").exists()
 
 

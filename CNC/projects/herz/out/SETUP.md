@@ -5,7 +5,7 @@ _Automatisch erzeugt - nicht von Hand bearbeiten, sondern `job.py` aendern und n
 **Status:** Pruefungen bestanden
 
 ## Material
-- holz, **99 x 91 mm**, Dicke **6 mm** (vorher nachmessen!)
+- holz, **99 x 91 mm**, Dicke **8 mm** (vorher nachmessen!)
 - Spannen: ausserhalb der Kontur, Schrauben max. 18 mm in die Opferplatte
 
 ## Nullpunkt
@@ -20,12 +20,13 @@ _Automatisch erzeugt - nicht von Hand bearbeiten, sondern `job.py` aendern und n
 
 Pruefung:
 
-- [INFO] Verfahrbereich X 0.0..89.0  Y 0.0..80.9  Z -6.30..5.00 mm
+- [INFO] Verfahrbereich X 0.0..89.0  Y 0.0..80.9  Z -8.80..5.00 mm
 - [INFO] Vorschuebe 300..800 mm/min
 - [INFO] Geschaetzte Laufzeit 1.4 min (ohne Beschleunigung)
 
 ## Hinweise
-- Erster Test: Vorschub 800 mm/min und 2 mm Zustellung (Lab-Tabelle: 1000 / 4 mm). Wenn es ruhig laeuft, darf der Vorschub waehrend des Laufs erhoeht werden.
+- Erster Test: Vorschub 800 mm/min und 2,2 mm Zustellung (Lab-Tabelle: 1000 / 4 mm). Wenn es ruhig laeuft, darf der Vorschub waehrend des Laufs erhoeht werden.
+- Es wird 0.8 mm in die Opferplatte gefraest, damit das Herz sicher durch ist. Ist das Brett dicker als 8.8 mm, THICKNESS anpassen!
 - Haltestege nach dem Fraesen mit Cutter/Saege trennen und verschleifen.
 - Die Kerbe oben wird mit Radius 2 mm verrundet (Fraeserradius) - das ist normal.
 

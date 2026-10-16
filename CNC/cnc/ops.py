@@ -35,7 +35,7 @@ class Profile:
     depth: float                 # mm below stock top (positive)
     side: str = "outside"        # "outside" | "inside" | "on"
     direction: str = "climb"     # "climb" | "conventional"
-    stepdown: float | None = None
+    stepdown: float | None = None   # max. depth per pass, spread evenly
     feed: float | None = None
     plunge: float | None = None
     rpm: int | None = None
@@ -68,7 +68,9 @@ class Profile:
             in_tab = (np.minimum(d, length - d) < tab_half).any(axis=1)
             return np.where(in_tab, np.maximum(z, tab_top), z)
 
-        levels = list(np.arange(stepdown, self.depth, stepdown)) + [self.depth]
+        # stepdown is a maximum: spread the depth evenly, no thin last pass
+        n_passes = int(np.ceil(self.depth / stepdown - 1e-9))
+        levels = [self.depth * (i + 1) / n_passes for i in range(n_passes)]
         n = len(pts)
         idx = 0  # index of the point where the current pass starts
         moves = [Move(*pts[0], job.machine.safe_z), Move(*pts[0], RETRACT), Move(*pts[0], 0.0, plunge)]
