@@ -14,6 +14,7 @@ I’ll keep updating this repo as my ideas and fields of interest evolve.
 | Trying new agentic coding workflows                                  | Experimenting with AI-driven coding assistants and workflows.                                  |
 | Using agent skills | move custom instruction logic from instruction, agent or prompt files to skills                      |
 | Code Safety and Quality | Use tools like SonarQuebe for Code quality and Security as static code analyses | 
+| [CNC-as-Code for the Shapeoko](./CNC/PLAN.md) | AI-friendly CNC milling workflow: designs, toolpaths, G-code checks and simulation as Python code. |
 # Talks I attended
 
 ## [Code smarter not harder - Daniel Sogl](https://speakerdeck.com/danielsogl/code-smarter-net-meetup-karlsruhe-january-2026?slide=2)

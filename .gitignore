@@ -38,3 +38,7 @@
 
 # Ignore OS generated files
 Thumbs.db
+
+# Python caches
+__pycache__/
+.pytest_cache/
